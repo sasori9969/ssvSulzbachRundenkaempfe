@@ -1,0 +1,21 @@
+body {
+    font-family: sans-serif;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.teams-container {
+    display: flex;
+    gap: 2rem; /* Abstand zwischen den Boxen */
+}
+
+.team-box {
+    flex: 1; /* Sorgt dafür, dass beide Boxen gleich breit sind (jeweils 50%) */
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+}
