@@ -1,28 +1,61 @@
+/* Grundlegende Stile und Farbpalette */
 body {
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f7f6; /* Leicht gräulicher Hintergrund */
+    color: #333;
+    margin: 0;
+    padding: 2rem;
+}
+
+/* Container für zentrierten Inhalt mit maximaler Breite */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .header {
     text-align: center;
     margin-bottom: 2rem;
+    color: #0a6429; /* Dunkles Vereinsgrün */
+}
+
+.header h1 {
+    margin-bottom: 0.5rem;
+}
+
+.header h2 {
+    font-weight: 400; /* Leichtere Schrift für die Unterüberschrift */
+    color: #1a9347; /* Helleres Grün */
 }
 
 .teams-container {
     display: flex;
+    flex-wrap: wrap; /* Erlaubt Umbruch auf kleineren Bildschirmen */
     gap: 2rem; /* Abstand zwischen den Boxen */
 }
 
 .team-box {
-    flex: 1; /* Sorgt dafür, dass beide Boxen gleich breit sind (jeweils 50%) */
-    border: 1px solid #ccc;
-    padding: 1rem;
+    flex: 1; /* Sorgt dafür, dass beide Boxen gleich breit sind */
+    min-width: 300px; /* Mindestbreite bevor es umbricht */
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    padding: 1.5rem;
     border-radius: 8px;
-    /* text-align: center; wird entfernt, damit der Inhalt linksbündig ist */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.team-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
 }
 
 .team-box h3 {
     text-align: center; /* Die Team-Überschrift bleibt zentriert */
     margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: #0a6429;
+    font-size: 1.5rem;
 }
 
 .input-group {
@@ -30,14 +63,25 @@ body {
 }
 
 .input-group label {
+    font-weight: 700;
+    font-size: 0.9rem;
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 0.4rem;
+    color: #555;
 }
 
 .input-group input {
     width: 100%;
     padding: 8px;
     box-sizing: border-box; /* Verhindert, dass padding die Breite beeinflusst */
-    border: 1px solid #ccc;
+    border: 1px solid #d0d0d0;
     border-radius: 4px;
+    background-color: #fdfdfd;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #1a9347; /* Helleres Grün als Fokusfarbe */
+    box-shadow: 0 0 0 3px rgba(26, 147, 71, 0.15);
 }
